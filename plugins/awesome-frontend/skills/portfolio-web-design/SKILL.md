@@ -1,20 +1,19 @@
 ---
 name: portfolio-web-design
 description: >
-  The PORTFOLIO lens — work-first, motion-rich sites that showcase projects
-  beautifully: creative-studio/agency portfolios, personal/designer/developer
-  portfolios, photographer/director reels, product/case-study showcases. Use when
-  the user wants this look or names it: "portfolio", "showcase my work", "studio/
-  agency site", "case studies", "awwwards-style portfolio", "creative reel", or is
-  building anything whose job is to present a body of work. CRITICAL: this lens
-  ships a MENU of layout patterns (`references/layout-patterns.md`) so multiple
-  portfolios don't all look the same — pick a different home archetype + case-study
-  pattern + motion intensity each time. This is a STYLE LENS — apply on top of the
-  awesome-frontend-design method and implement its motion with awesome-react-
-  animations. Anchored in teardowns of lusion.co, obys.agency, cuberto.com,
-  unseen.co. Core feel: big confident type, media-forward layout, generous space,
-  a cinematic intro, smooth scroll, custom cursor, and choreographed reveals —
-  palette-flexible (works dark, light, or warm).
+  The PORTFOLIO lens — work-first, motion-rich sites that showcase projects:
+  studio/agency portfolios, personal designer/developer portfolios,
+  photographer/director reels, case-study showcases. Use when the user wants this
+  look or names it: "portfolio", "showcase my work", "studio/agency site", "case
+  studies", "awwwards-style portfolio", "creative reel", or is building anything
+  that presents a body of work. Ships a MENU of layout patterns
+  (references/layout-patterns.md) so multiple portfolios don't look the same — pick
+  a different home archetype + case-study pattern + motion intensity each time. A
+  STYLE LENS: apply on top of awesome-frontend-design, implement motion with
+  awesome-react-animations. Anchored in teardowns of lusion.co, obys.agency,
+  cuberto.com, unseen.co. Core feel: big confident type, media-forward layout,
+  generous space, cinematic intro, smooth scroll, custom cursor, choreographed
+  reveals — palette-flexible (dark, light, or warm).
 ---
 
 # Portfolio — the lens
