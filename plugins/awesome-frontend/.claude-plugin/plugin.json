@@ -1,6 +1,6 @@
 {
   "name": "awesome-frontend",
-  "description": "Design distinctive, high-craft frontends and animate them smoothly. A style-agnostic design method, four reference-backed style lenses (editorial, Swiss/minimal, brutalist, luxury), and 60fps React animation best practices.",
+  "description": "Design distinctive, high-craft frontends and animate them smoothly. A style-agnostic design method, five reference-backed style lenses (editorial, Swiss/minimal, brutalist, luxury, portfolio), and 60fps React animation best practices.",
   "author": {
     "name": "Guilherme Carneiro"
   },
@@ -14,6 +14,7 @@
     "editorial",
     "swiss",
     "brutalist",
-    "luxury"
+    "luxury",
+    "portfolio"
   ]
 }

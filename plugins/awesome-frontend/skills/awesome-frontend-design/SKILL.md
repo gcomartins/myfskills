@@ -9,7 +9,8 @@ description: >
   generic", "this looks AI-made", "give it a real identity", or any composition,
   type-pairing, color, spacing, or motion-direction question. This is the DESIGN
   METHOD; for a specific look, pair it with a style LENS skill (editorial-web-design,
-  swiss-minimal-design, brutalist-web-design, luxury-web-design). For making the
+  swiss-minimal-design, brutalist-web-design, luxury-web-design, portfolio-web-design).
+  For making the
   motion it calls for run at 60fps, pair with awesome-react-animations. Core
   belief: great design is a few bold, committed decisions executed with discipline.
 ---
@@ -83,6 +84,9 @@ vocabulary, do/don't rules, and a real reference teardown:
   deliberate "ugly-beautiful".
 - **luxury-web-design** — high-contrast serifs, restrained palette, slow elegant
   pacing, subtle micro-interactions.
+- **portfolio-web-design** — work-first, motion-rich showcases (studio/personal/
+  agency portfolios, reels, case studies). Ships a *menu* of layout patterns so
+  portfolios don't repeat. (References: lusion, obys, cuberto, unseen.)
 
 If no lens fits, you can still produce strong work from this method alone — just
 make the five decisions deliberately and commit.
