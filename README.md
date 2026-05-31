@@ -1,4 +1,4 @@
-# gcomartins · Claude Code skills marketplace
+# myfskills · Claude Code skills marketplace
 
 A small, opinionated marketplace of **frontend craft** skills for [Claude Code](https://code.claude.com).
 One plugin, six composable skills: a design-direction method, four
@@ -8,8 +8,8 @@ reference-backed style lenses, and React animation best practices.
 
 ```bash
 # in Claude Code
-/plugin marketplace add gcomartins/claude-skills-marketplace
-/plugin install awesome-frontend@gcomartins
+/plugin marketplace add gcomartins/myfskills
+/plugin install awesome-frontend@myfskills
 ```
 
 Then update any time with `/plugin marketplace update` and `/plugin update`.
