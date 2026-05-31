@@ -45,4 +45,4 @@ directly: `npx react-doctor install`.
 
 ## License
 
-MIT © Guilherme Comartins
+MIT © Guilherme Carneiro
