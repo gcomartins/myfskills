@@ -78,5 +78,8 @@ Editorial is *loud but disciplined* — restraint is what keeps "loud" from "mes
   `heyhoncho-detail.png`.
 - `references/organic-motion-recipe.md` — the seven ingredients of organic motion
   and a reference-stack → modern-React translation.
+- `references/more-references.md` — three more editorial teardowns (Gretel,
+  COLLINS, BUCK) with measured tokens + screenshots, mapping the style's
+  bold → serif-elegant → clean-grid spectrum.
 - Pair with **awesome-frontend-design** (method) and **awesome-react-animations**
   (smooth 60fps implementation, View Transitions, split-text staggers, Lenis).

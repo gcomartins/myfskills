@@ -70,5 +70,7 @@ turns it into generic SaaS — the rigor is the point.
 
 ## References
 - `references/case-study-swissted.md` — tokens + teardown, with `swissted.png`.
+- `references/more-references.md` — three more teardowns (Grilli Type, Lineto,
+  Edenspiekermann) with measured tokens + screenshots.
 - Pair with **awesome-frontend-design** (method) and **awesome-react-animations**
   (minimal motion, reduced-motion).

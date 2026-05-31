@@ -72,5 +72,7 @@ the harshness is the identity.
 
 ## References
 - `references/case-study-gumroad.md` — tokens + teardown, with `gumroad.png`.
+- `references/more-references.md` — three more teardowns (Brutalist Websites,
+  Balenciaga, Cash App) spanning raw → hard → bold-flat, with tokens + screenshots.
 - Pair with **awesome-frontend-design** (method) and **awesome-react-animations**
   (snappy press interactions, reduced-motion).

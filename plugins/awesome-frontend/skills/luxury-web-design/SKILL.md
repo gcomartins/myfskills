@@ -69,5 +69,7 @@ Luxury is what you *leave out* — restraint and precision are the whole game.
 
 ## References
 - `references/case-study-aesop.md` — tokens + teardown, with `aesop.png`.
+- `references/more-references.md` — three more teardowns (The Row, Le Labo,
+  Hermès) covering stark vs. warm-atmospheric luxury, with tokens + screenshots.
 - Pair with **awesome-frontend-design** (method) and **awesome-react-animations**
   (slow, subtle motion; reduced-motion).
