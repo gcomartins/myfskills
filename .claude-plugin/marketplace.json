@@ -1,0 +1,34 @@
+{
+  "name": "gcomartins",
+  "owner": {
+    "name": "Guilherme Comartins"
+  },
+  "metadata": {
+    "description": "Guilherme's frontend craft skills for Claude Code — design direction (a style-agnostic method plus editorial, Swiss, brutalist, and luxury lenses) and smooth React animation best practices.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "awesome-frontend",
+      "source": "./plugins/awesome-frontend",
+      "description": "Design distinctive, high-craft frontends and animate them smoothly. Bundles a style-agnostic design method, four reference-backed style lenses (editorial, Swiss/minimal, brutalist, luxury), and 60fps React animation best practices.",
+      "author": {
+        "name": "Guilherme Comartins"
+      },
+      "category": "design",
+      "tags": [
+        "frontend",
+        "design",
+        "ui",
+        "ux",
+        "animation",
+        "react",
+        "framer-motion",
+        "editorial",
+        "swiss",
+        "brutalist",
+        "luxury"
+      ]
+    }
+  ]
+}

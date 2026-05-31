@@ -1,0 +1,19 @@
+{
+  "name": "awesome-frontend",
+  "description": "Design distinctive, high-craft frontends and animate them smoothly. A style-agnostic design method, four reference-backed style lenses (editorial, Swiss/minimal, brutalist, luxury), and 60fps React animation best practices.",
+  "author": {
+    "name": "Guilherme Comartins"
+  },
+  "homepage": "https://github.com/gcomartins/claude-skills-marketplace",
+  "keywords": [
+    "frontend",
+    "design",
+    "animation",
+    "react",
+    "framer-motion",
+    "editorial",
+    "swiss",
+    "brutalist",
+    "luxury"
+  ]
+}
