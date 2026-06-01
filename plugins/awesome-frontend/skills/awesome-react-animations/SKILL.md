@@ -84,10 +84,14 @@ free perf win on weak hardware.
   lists (`AnimatePresence`), shared-layout transitions (`layout`), springs,
   gesture-driven motion, scroll-linked parallax, staggered reveals. The default
   for "real" UI animation in React.
-- **React View Transitions** (`<ViewTransition>`, `startViewTransition`) — route
-  and large UI-state changes where you want the browser to crossfade/morph
-  between two DOM states. Great for page transitions and list reorders without
-  hand-animating each element.
+- **React View Transitions** (`<ViewTransition>`, `addTransitionType`) — route and
+  large UI-state changes where you want the browser to crossfade/morph between two
+  DOM states. The standout is the **cross-route shared-element morph**: give a list
+  card and the detail-page hero the same `name` and clicking "enters the card" — it
+  grows into the hero, and back reverses it, for free. Far less code than
+  orchestrating exit+enter across a route with `AnimatePresence`. (Setup, the typed
+  wrapper for the still-missing types, directional slides, and the gotchas:
+  `references/view-transitions.md`.)
 - **WebGL / 3D** (real geometry, shaders, glass/particles, immersive heroes) — out
   of scope here; this skill is DOM/compositor motion. For react-three-fiber, drei,
   postprocessing, and shader work, use the **awesome-webgl** skill (it keeps the
@@ -118,7 +122,10 @@ Less client JS = faster hydration = the first interaction doesn't stutter. (See
    browsers silently skip `backdrop-filter`/`mix-blend-mode`/filters, so an FPS
    reading there can look perfect while real hardware chugs. Record a DevTools
    Performance trace over the interaction, or say plainly the user should feel it
-   on their machine.
+   on their machine. And don't test scroll reveals with an instant
+   `scrollTo`/`scrollIntoView` — teleporting past an element skips the
+   IntersectionObserver tick and leaves `whileInView` stuck hidden; that's a test
+   artifact, not a user bug. Scroll for real (wheel ticks) to verify.
 5. **Preserve the intent.** If smoothing it changed how it looks, you went too
    far — find a cheaper path to the *same* motion, don't water it down.
 
@@ -133,6 +140,10 @@ Less client JS = faster hydration = the first interaction doesn't stutter. (See
 - `references/scroll-and-reveal.md` — `whileInView`/`useInView` reveals, scroll-
   linked parallax with `useScroll`/`useTransform`, the server-page + reveal-island
   pattern, smooth-scroll tradeoffs, `content-visibility` interplay.
+- `references/view-transitions.md` — the cross-route shared-element morph ("enter
+  the card") with React `<ViewTransition>` + Next 16: setup, the typed wrapper for
+  the missing types, chaining morphs, directional `nav-forward`/`nav-back` slides,
+  blur polish, reduced-motion, and the honest-verification gotchas.
 
 ## One line
 

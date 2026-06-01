@@ -83,8 +83,11 @@ entirely different sites.
 4. **Choreograph the entrance and scroll**: preloader → reveal → per-project
    reveals → project transition. Add a custom cursor + hover media reveal.
 5. **Implement smoothly** per `awesome-react-animations` (Lenis smooth scroll,
-   split-text intro, `whileInView` reveals, View Transitions between projects,
-   reduced-motion fallback). WebGL only if the work warrants it.
+   split-text intro, `whileInView` reveals, reduced-motion fallback). For the
+   work→case-study navigation, make the card **morph into the detail hero**
+   (shared-element View Transition) so clicking "enters the card" and back reverses
+   it — the single move that makes a portfolio feel awwwards-grade. WebGL only if
+   the work warrants it.
 
 ## Do / Don't
 
@@ -103,5 +106,6 @@ WebGL/scroll-jack must still hit 60fps and respect reduced motion).
 - Overlaps with **editorial-web-design** (the numbered-index pattern + organic
   motion live there too). Pair with **awesome-frontend-design** (method) and
   **awesome-react-animations** (60fps motion: preloader, smooth scroll, reveals,
-  View Transitions). For the interactive-WebGL-canvas archetype (A9 — glass/blob/
-  particles, an immersive Lusion-style hero), use **awesome-webgl**.
+  and the **shared-element card→case-study morph** — see its
+  `references/view-transitions.md`). For the interactive-WebGL-canvas archetype
+  (A9 — glass/blob/particles, an immersive Lusion-style hero), use **awesome-webgl**.

@@ -114,6 +114,10 @@ no-WebGL.
   (`useRef<any>`) when you set `.distort`/`.chromaticAberration` imperatively.
 - `MeshTransmissionMaterial` needs an `Environment` to refract; without one it
   reads flat/black.
+- A `position:fixed` `<Canvas>` that lives only on one route **unmounts and
+  re-inits WebGL on navigation** (brief cost/flash). If you add route View
+  Transitions, host the canvas in a layout that persists across the routes — or
+  accept the re-init. (See awesome-react-animations `references/view-transitions.md`.)
 
 ## References
 - `references/r3f-recipes.md` — copy-paste, verified snippets: the dynamic

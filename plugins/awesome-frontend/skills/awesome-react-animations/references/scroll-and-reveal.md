@@ -23,6 +23,18 @@ scrolling.
 re-enters, which is both distracting and wasteful. For finer control,
 `useInView(ref, { once: true, margin })` returns a boolean you can branch on.
 
+> **Two reveal gotchas, both real bugs I've hit:**
+> - **Above-the-fold content shouldn't use `whileInView`.** A hero already in view
+>   on mount may never get an "entering" IntersectionObserver tick, so its words
+>   stay stuck at `y:115%` (clipped) and the headline is invisible. Drive
+>   above-the-fold reveals with `animate` (play on mount), and reserve
+>   `whileInView` for things the user scrolls *to*.
+> - **Don't verify reveals with an instant `scrollTo`/`scrollIntoView`.**
+>   Teleporting past an element skips the intersecting tick and leaves it stuck at
+>   its initial state — a *test artifact*, not a user bug (real users + Lenis
+>   scroll smoothly through and fire the observer). Scroll with real wheel ticks
+>   when checking.
+
 ## The reveal-island pattern (keep pages on the server)
 
 A reveal needs a Client Component, but don't make a whole page `'use client'`
