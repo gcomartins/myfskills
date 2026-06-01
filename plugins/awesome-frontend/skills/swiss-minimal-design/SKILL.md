@@ -54,6 +54,32 @@ Apply on top of the `awesome-frontend-design` method. Worked example with tokens
 - Compose asymmetrically *on the grid*; let big white space carry importance.
 - Number/label things plainly; let the structure, not styling, communicate.
 
+### Web starter tokens (drop-in, then tune)
+Don't reinvent the system each time — start here:
+```css
+@theme {
+  --color-ink: #111; --color-paper: #fff; --color-accent: #e8341c; /* one signal */
+  --spacing-unit: 8px;            /* baseline; all spacing is a multiple */
+}
+* { border-radius: 0 !important; } /* kill inherited radius globally — non-negotiable */
+.grid-12 { display:grid; grid-template-columns:repeat(12,1fr); gap: calc(var(--spacing-unit)*3); }
+```
+Type ramp via `clamp()`, 4 steps: display / heading / body / micro-label.
+- **Webfont decision:** the most authentic move is *no* webfont — use the platform
+  grotesque stack (`Helvetica Neue, Arial, sans-serif`). Don't reach for a Google
+  display font; it breaks the neutrality. If you must load one, Inter or Neue Haas,
+  one family, 2–3 weights.
+
+### Named pattern: the inspectable grid overlay
+Ship a keyboard-toggled (press **G**) overlay that renders the *actual* columns
+over the page. It makes "the grid is the design" literal and is the single most
+on-thesis feature you can add — reviewers can see the structure is real, not
+decorative. Cheap to build, high signal.
+
+> **Note on dashes:** Swiss uses en-dashes for ranges ("Index 01–06") and masthead
+> separators. react-doctor's anti-AI-slop check flags em/en-dashes in JSX text —
+> here they're intentional typography; keep them, don't let the linter "fix" them.
+
 ## Motion direction
 Minimal and functional. Brief, precise transitions (short fades/slides on one
 easing); no decorative or continuous motion. The restraint *is* the statement —

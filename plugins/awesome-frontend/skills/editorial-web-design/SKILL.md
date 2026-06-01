@@ -61,6 +61,30 @@ and the motion recipe in `references/organic-motion-recipe.md`.
   into the detail page's centered title-card (curtain wipe, no hard reload). In
   React: `view-transition-name` on the shared text.
 
+## Implementing on a free / Next.js stack
+
+The teardown names commercial faces (FK Screamer, Heldane). Free substitutes that
+hit the same "condensed shouting grotesque + high-contrast serif" tension:
+- **Loud grotesque:** Archivo (has a `wdth` axis), Anton, Oswald, Bebas Neue.
+- **Refined serif:** Fraunces (optical + soft axes), Playfair Display, Newsreader.
+
+Two Next.js sharp edges this lens reliably hits:
+- **`next/font/google` axes vs weight:** specifying `weight: [...]` *and*
+  `axes: [...]` together is a hard build error ("Axes can only be defined … when
+  the weight property is … `variable`"). When you want a width/optical axis (e.g.
+  Archivo `wdth`), **omit `weight`** — the full variable range loads and CSS
+  `font-weight`/`font-stretch` still work.
+- **Palette-agnostic:** this lens is *not* tied to heyhoncho's blush-red, or to
+  dark. Commit to *a* hue; the signature moves (preloader **invert**, curtain wipe,
+  masthead grammar) work on any base — invert = ink-screen on a light canvas just
+  as well as light-on-dark.
+
+> **Note on dashes & View Transitions:** the masthead em-dash separators ("01 —
+> Spatial Identity") are intentional editorial typography — react-doctor flags them
+> as AI-slop; keep them. And React `<ViewTransition>` is still missing from stable
+> `@types/react` in Next 16; keep the typed re-export shim (`lib/view-transition.tsx`,
+> `React as any`) — see the `awesome-react-animations` view-transitions reference.
+
 ## Do / Don't
 
 **Do:** commit to one loud concept; go enormous on the display type; leave huge

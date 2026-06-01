@@ -54,12 +54,32 @@ Apply on top of the `awesome-frontend-design` method. Worked example with tokens
   shadow). Hover = translate + shadow change, snappy.
 - Confident color blocks; obvious grid; a bit of density and asymmetry is good.
 
+## Page-level composition (beyond the component)
+The gumroad teardown is component-centric (borders, shadows, press). For a full
+multi-section site, the brutalist *layout* archetypes are:
+- **Masthead bars:** nav and section headers as full-width bordered bars with hard
+  bottom rules — the page reads like a stacked set of labelled blocks.
+- **Exposed cell-divider grid:** sections are an obvious grid whose cell borders are
+  *visible* (hard dividers between rows/columns), structure on display.
+- **Collage-offset cards:** in a work/index grid, give cards deliberate vertical
+  offsets (`md:mt-12`, alternating) so it reads as energetic collage, not a tidy
+  matrix. Density + asymmetry is the point.
+- **Inverted panels & pull-quote bands:** break the paper canvas with a full black
+  section or a single loud-accent band for rhythm.
+- **Global radius reset:** Tailwind v4 defaults and component classes sneak in
+  radii; for *pure* brutalist add `* { border-radius: 0 !important; }` once — the
+  border+shadow do the work, not the corner.
+
 ## Motion direction
 **Snappy and mechanical**, not smooth-organic. Short, abrupt transitions; the
 signature move is the **press**: on hover/active, translate the element by the
 shadow offset and shrink the shadow so it looks physically pressed. Little to no
 easing (or a fast ease) suits the blunt feel. Keep it cheap (transform/opacity)
 and reduced-motion-aware. (Implementation: awesome-react-animations.)
+
+**Blunt cursor (optional):** brutalist wants no *soft* custom cursor. If you add
+one, make it a hard square/block driven by a motion value with a snappy (stiff,
+low-damping) spring — never a soft lagging ring. Or just keep the system cursor.
 
 ## Do / Don't
 **Do:** commit to thick black borders + flat offset shadows; use loud flat colors

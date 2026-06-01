@@ -52,6 +52,19 @@ Apply on top of the `awesome-frontend-design` method. Worked example with tokens
 - Calm full-bleed imagery; hairline rules; thin-outline or text+arrow buttons.
 - Fewer elements, more space, slower vertical rhythm. Center or gently asymmetric.
 
+### Layout archetypes for a multi-section site
+"Spacious, one-at-a-time" can read as *empty* if you only add margin. Use real
+structure so calm feels composed, not bare:
+- **Alternating stacked index** (for a work/project list): one project per row,
+  large image alternating left/right of a small refined caption block, generous
+  vertical gaps. Reveals one row at a time on scroll — never a dense grid.
+- **Hairline-divided index:** thin top rules separating rows with a label/value
+  masthead; structure carried by alignment + hairlines, not boxes.
+- **Centered single-focus sections:** one statement or one plate centered in a
+  wide calm field; the surrounding space *is* the composition.
+Anchor text to a consistent measure (not full-bleed paragraphs); let the canvas,
+not borders, separate sections.
+
 ## Motion direction
 **Slow, soft, and sparse.** Long, gentle fades and eases (slightly longer
 durations, smooth/quiet easing); subtle image reveals and cross-fades; refined

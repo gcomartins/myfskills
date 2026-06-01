@@ -73,7 +73,28 @@ memory.
 
 **6. Respect `prefers-reduced-motion`.** Gate continuous/large motion and
 disable smooth-scroll for users who asked for less. It's accessibility *and* a
-free perf win on weak hardware.
+free perf win on weak hardware. The canonical *global* gate is
+`<MotionConfig reducedMotion="user">` at the root — it snaps every `m`
+component's transforms for you, so you don't sprinkle `matchMedia` checks through
+every component. Still disable Lenis/smooth-scroll and any custom cursor
+explicitly. Avoid the `useEffect` + `matchMedia` + `setState` capability-gate
+pattern as your default: Next 16's `react-hooks/set-state-in-effect` lint rule
+flags a synchronous `setState` inside an effect as an **error** (react-doctor will
+fail on it). If you must gate in JS, prefer `useSyncExternalStore` (SSR-safe, no
+effect-setState) or defer the set with `queueMicrotask`/`setTimeout(…,0)`.
+
+**7. On-mount / above-the-fold reveals: use a CSS keyframe, not framer.** This is
+a silent-content-loss footgun, not just jank. framer's `whileInView` /
+`animate`-on-mount on per-word masked spans can *intermittently never fire* after
+SSR hydration — the IntersectionObserver tick is missed or the mount animation
+races React, and the element stays stuck at its `from` state (`translateY(110%)`,
+`opacity:0`) — invisible. For reveals that play once on load, animate with a CSS
+`@keyframes` rise/fade instead: it runs on paint, can't race hydration, stays
+compositor-only (`transform`/`opacity`), and honors reduced-motion via a media
+query. Reserve framer `whileInView` for genuinely *scroll-in* reveals below the
+fold. If a screenshot shows blank text the DOM proves is painted, suspect a
+promoted-layer capture artifact first — but a stuck clipped transform is also
+real; confirm via DOM inspection either way.
 
 ## Choosing the tool
 
