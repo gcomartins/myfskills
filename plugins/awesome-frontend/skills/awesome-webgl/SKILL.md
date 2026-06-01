@@ -77,7 +77,9 @@ no-WebGL.
   `metalness:1`, low roughness, a colorful `Environment` for iridescent reflections.
 - **Particles** — `Points` (or `InstancedMesh`) with a flow field (curl/simplex
   noise) + cursor repulsion. CPU-updated for a few hundred; GPGPU (FBO ping-pong)
-  for tens of thousands.
+  for tens of thousands. Build the initial buffer in `useMemo` with a **seeded
+  PRNG**, not `Math.random()` — Next 16's `react-hooks/purity` lint rule errors on
+  impure calls during render (it fires inside `useMemo` too).
 - **Postprocessing** — `Bloom` (high `luminanceThreshold` on light themes so it
   doesn't wash out), `ChromaticAberration`, `DepthOfField` for the "lens" feel.
 - **Scroll-driven scenes** — map scroll progress to camera/object transforms;

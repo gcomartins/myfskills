@@ -96,6 +96,20 @@ fold. If a screenshot shows blank text the DOM proves is painted, suspect a
 promoted-layer capture artifact first — but a stuck clipped transform is also
 real; confirm via DOM inspection either way.
 
+**8. Two more Next 16 lint footguns (CI-failing) + the scoped-keyframe trick.**
+- **Never read `ref.current` during render** (Next 16 `react-hooks/refs`). The
+  classic "fire the tween once" guard — `if (inView && !started.current) { started.current = true; animate(...) }` — is an **error**. Drive the tween from
+  `useEffect(() => { if (inView) { const c = animate(mv, to, …); return () => c.stop() } }, [inView, …])`. Animating a **motion value** inside an effect is *not*
+  setState-in-effect (it lives off the render path), so it's lint-clean. This is
+  the canonical count-up / reveal-on-view pattern.
+- **No `Math.random()` (or other impure calls) during render** (`react-hooks/purity`) — it fires even inside `useMemo`. For particle clouds / jittered
+  layouts, use a tiny **seeded PRNG** (e.g. mulberry32) so the values are
+  deterministic and stable across renders.
+- **Scoped keyframes when you can't touch global CSS** (marquee, scanline, any
+  continuous loop in an isolated component): emit an inline `<style>` with a
+  **namespaced** keyframe name (`@keyframes avpScan {…} .avp-scan{…}`) right in the
+  component, animating `transform`/`opacity` only, with a `@media (prefers-reduced-motion: reduce)` off-switch. Keeps the component self-contained and compositor-driven.
+
 ## Choosing the tool
 
 - **CSS transition/animation** — hover states, simple enter/exit, looping
