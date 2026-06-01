@@ -1,6 +1,6 @@
 {
   "name": "awesome-frontend",
-  "description": "Design distinctive, high-craft frontends and animate them smoothly. A style-agnostic design method, five reference-backed style lenses (editorial, Swiss/minimal, brutalist, luxury, portfolio), and 60fps React animation best practices.",
+  "description": "Design distinctive, high-craft frontends and animate them smoothly. A style-agnostic design method, five reference-backed style lenses (editorial, Swiss/minimal, brutalist, luxury, portfolio), 60fps React animation best practices, and interactive WebGL/3D (react-three-fiber).",
   "author": {
     "name": "Guilherme Carneiro"
   },
@@ -15,6 +15,10 @@
     "swiss",
     "brutalist",
     "luxury",
-    "portfolio"
+    "portfolio",
+    "webgl",
+    "three.js",
+    "react-three-fiber",
+    "3d"
   ]
 }

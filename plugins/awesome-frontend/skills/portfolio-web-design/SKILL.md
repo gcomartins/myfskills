@@ -103,4 +103,5 @@ WebGL/scroll-jack must still hit 60fps and respect reduced motion).
 - Overlaps with **editorial-web-design** (the numbered-index pattern + organic
   motion live there too). Pair with **awesome-frontend-design** (method) and
   **awesome-react-animations** (60fps motion: preloader, smooth scroll, reveals,
-  View Transitions).
+  View Transitions). For the interactive-WebGL-canvas archetype (A9 — glass/blob/
+  particles, an immersive Lusion-style hero), use **awesome-webgl**.

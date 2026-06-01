@@ -88,6 +88,10 @@ free perf win on weak hardware.
   and large UI-state changes where you want the browser to crossfade/morph
   between two DOM states. Great for page transitions and list reorders without
   hand-animating each element.
+- **WebGL / 3D** (real geometry, shaders, glass/particles, immersive heroes) — out
+  of scope here; this skill is DOM/compositor motion. For react-three-fiber, drei,
+  postprocessing, and shader work, use the **awesome-webgl** skill (it keeps the
+  same 60fps + reduced-motion discipline).
 
 Match the tool to the job; don't pull in framer-motion to fade one button CSS
 could handle, and don't hand-animate a route change View Transitions would do
