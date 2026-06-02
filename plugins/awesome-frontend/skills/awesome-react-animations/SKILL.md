@@ -110,6 +110,26 @@ real; confirm via DOM inspection either way.
   **namespaced** keyframe name (`@keyframes avpScan {…} .avp-scan{…}`) right in the
   component, animating `transform`/`opacity` only, with a `@media (prefers-reduced-motion: reduce)` off-switch. Keeps the component self-contained and compositor-driven.
 
+**9. Scroll-driven "active section" → use a viewport-center line, not
+`intersectionRatio`.** For a scroll experience that themes/highlights by the
+section you're "in" (morphing palettes, a chapter index), do NOT pick the section
+with the highest `intersectionRatio` — ratio is *fraction of that section
+visible*, so a tall section scores low and a short one wins, and the active state
+lags or sticks on the wrong section. Instead collapse the observer root to a line
+at the viewport center — `new IntersectionObserver(cb, { rootMargin: "-50% 0px -50% 0px", threshold: 0 })` — and set active to whichever entry `isIntersecting`
+(exactly one straddles the center line). Height-independent and deterministic.
+
+**Two "build passed but the page renders broken" traps these scroll/art-directed
+builds hit — verify the rendered pixels, not just that it compiled:**
+- **Tailwind purged your classes.** A new source dir (e.g. `src/portfolio/**`) not
+  listed in `content` globs → its *unique* arbitrary classes (`text-[14vw]`,
+  `text-[var(--fg)]`, `bg-[var(--surface)]`) are stripped. Classes shared with
+  scanned files survive, so layout half-works and *masks* it — and `build` / lint
+  / typecheck / SSR-HTML checks all pass (missing CSS isn't a compile error). Widen
+  `content` to cover the dir; confirm a unique class is in the emitted CSS.
+- A curl/SSR check proves markup, not styling. Open it in a browser (or screenshot)
+  before claiming it works.
+
 ## Choosing the tool
 
 - **CSS transition/animation** — hover states, simple enter/exit, looping
