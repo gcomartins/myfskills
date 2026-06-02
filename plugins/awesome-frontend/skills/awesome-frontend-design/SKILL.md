@@ -68,6 +68,11 @@ implement it smoothly per the **awesome-react-animations** skill (this core deci
 4. Compose on a grid you then break (anchor, float, negative space, scale contrast).
 5. Choreograph motion (sequence + one signature easing), then implement smoothly.
 6. Sweat details (hover reveals, cursor, consistent corners, optical alignment).
+7. Make it hold at every width and run at 60fps — the **responsive-web-design**
+   skill (fluid type, no horizontal scroll, mobile-first) and
+   **awesome-react-animations** (compositor, reduced-motion) are the
+   implementation layer under this method. A design isn't done until it's
+   beautiful on a 390px phone.
 
 ## Pick a lens (style packs)
 

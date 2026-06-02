@@ -130,6 +130,22 @@ builds hit — verify the rendered pixels, not just that it compiled:**
 - A curl/SSR check proves markup, not styling. Open it in a browser (or screenshot)
   before claiming it works.
 
+**10. Animate a *themewide palette swap* by registering tokens as `@property`.**
+When the whole UI morphs between palettes (a scroll-driven theme, light↔dark), it
+looks **dry/half-animated** if you only `transition: background-color` on one
+element — every consumer of `var(--accent)`/`var(--surface)`/borders/text snaps
+instantly. Fix: register each token as a typed custom property and transition the
+*variable itself*, so all consumers interpolate together:
+```css
+@property --bg { syntax: "<color>"; inherits: true; initial-value: #101013; }
+/* …repeat per token; use <length> for --radius … */
+.theme-root { transition: --bg .7s var(--ease), --accent .7s var(--ease)/*, …*/; }
+```
+Set the new values (e.g. via inline style from React state) and the browser tweens
+the registered props; consumers re-resolve each frame. It's a paint transition, so
+it's for *discrete, infrequent* swaps (theme changes) — not per-frame loops. The
+global reduced-motion rule (`transition-duration: .01ms`) collapses it for free.
+
 ## Choosing the tool
 
 - **CSS transition/animation** — hover states, simple enter/exit, looping

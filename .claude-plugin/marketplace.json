@@ -32,7 +32,8 @@
         "webgl",
         "three.js",
         "react-three-fiber",
-        "3d"
+        "3d",
+        "responsive"
       ]
     }
   ]
