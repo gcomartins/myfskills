@@ -60,6 +60,17 @@ default) reused consistently. Principles: `references/motion-direction.md`. Then
 implement it smoothly per the **awesome-react-animations** skill (this core decides
 *what* and *why*; that skill keeps it 60fps).
 
+### 6. State & feedback — never freeze
+A beautiful screen that goes dead the instant it's used reads as broken, not
+crafted. Every async action — navigation, fetch, mutation, filter, submit — must
+acknowledge the click *immediately*: a pending state on the control, a skeleton
+for first paint, a route-level loading state, or the affected region dimming via a
+transition (e.g. React `useTransition`/`isPending`). Treat "I clicked and nothing
+happened" as a bug, not a missing nicety. Design the empty, loading, and error
+states with the same intent as the happy path — they're most of the real
+experience. Make the feedback *choreographed* (the same signature easing as the
+rest), never a jarring spinner bolted on.
+
 ## Process
 
 1. Write the concept (3 words) and the reference feeling.
@@ -68,7 +79,9 @@ implement it smoothly per the **awesome-react-animations** skill (this core deci
 4. Compose on a grid you then break (anchor, float, negative space, scale contrast).
 5. Choreograph motion (sequence + one signature easing), then implement smoothly.
 6. Sweat details (hover reveals, cursor, consistent corners, optical alignment).
-7. Make it hold at every width and run at 60fps — the **responsive-web-design**
+7. Design the state machine — loading/skeleton, empty, error, and pending feedback
+   for every async action (never leave the UI frozen on a click).
+8. Make it hold at every width and run at 60fps — the **responsive-web-design**
    skill (fluid type, no horizontal scroll, mobile-first) and
    **awesome-react-animations** (compositor, reduced-motion) are the
    implementation layer under this method. A design isn't done until it's
