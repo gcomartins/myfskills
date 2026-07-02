@@ -11,8 +11,10 @@ description: >
   METHOD; for a specific look, pair it with a style LENS skill (editorial-web-design,
   swiss-minimal-design, brutalist-web-design, luxury-web-design, portfolio-web-design).
   For making the
-  motion it calls for run at 60fps, pair with awesome-react-animations. Core
-  belief: great design is a few bold, committed decisions executed with discipline.
+  motion it calls for run at 60fps, pair with awesome-react-animations. When the
+  page must also convert, activate, or retain (landing pages, pricing, signup/
+  onboarding), pair with revenue-centric-design. Core belief: great design is a
+  few bold, committed decisions executed with discipline.
 ---
 
 # Awesome Frontend Design — the method (core)
@@ -108,6 +110,17 @@ vocabulary, do/don't rules, and a real reference teardown:
 
 If no lens fits, you can still produce strong work from this method alone — just
 make the five decisions deliberately and commit.
+
+## When the goal is conversion, not just craft
+
+This method makes a page look intentional; it doesn't by itself make a page
+convert, activate, retain, or price well. When the brief is a landing page,
+signup/trial flow, pricing page, onboarding, or anything where the business
+outcome matters as much as the look, pair this method with
+**revenue-centric-design** — a 101-principle playbook (CRO, activation, churn,
+pricing psychology, positioning) that tells you *which* element should carry
+the emphasis this method gives it (the CTA, the proof, the price anchor), so
+craft and conversion pull the same direction instead of fighting.
 
 ## Anti-patterns (the "generic AI site" smell)
 

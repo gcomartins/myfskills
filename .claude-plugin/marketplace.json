@@ -11,7 +11,7 @@
     {
       "name": "awesome-frontend",
       "source": "./plugins/awesome-frontend",
-      "description": "Design distinctive, high-craft frontends and animate them smoothly. Bundles a style-agnostic design method, five reference-backed style lenses (editorial, Swiss/minimal, brutalist, luxury, portfolio), 60fps React animation best practices, and interactive WebGL/3D (react-three-fiber).",
+      "description": "Design distinctive, high-craft frontends and animate them smoothly. Bundles a style-agnostic design method, five reference-backed style lenses (editorial, Swiss/minimal, brutalist, luxury, portfolio), 60fps React animation best practices, interactive WebGL/3D (react-three-fiber), and a revenue-centric design playbook for conversion, onboarding, pricing, and retention.",
       "author": {
         "name": "Guilherme Comartins"
       },
@@ -33,7 +33,12 @@
         "three.js",
         "react-three-fiber",
         "3d",
-        "responsive"
+        "responsive",
+        "conversion",
+        "cro",
+        "onboarding",
+        "pricing",
+        "retention"
       ]
     }
   ]
