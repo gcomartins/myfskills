@@ -1,6 +1,6 @@
 {
   "name": "awesome-frontend",
-  "description": "Design distinctive, high-craft frontends and animate them smoothly. A style-agnostic design method, five reference-backed style lenses (editorial, Swiss/minimal, brutalist, luxury, portfolio), 60fps React animation best practices, interactive WebGL/3D (react-three-fiber), and a revenue-centric design playbook for conversion, onboarding, pricing, and retention.",
+  "description": "Design distinctive, high-craft frontends and animate them smoothly. A style-agnostic design method, five reference-backed style lenses (editorial, Swiss/minimal, brutalist, luxury, portfolio), 60fps React animation best practices, interactive WebGL/3D (react-three-fiber), responsive/fluid layout that never breaks on mobile, and a revenue-centric design playbook for conversion, onboarding, pricing, and retention.",
   "author": {
     "name": "Guilherme Carneiro"
   },
@@ -20,6 +20,8 @@
     "three.js",
     "react-three-fiber",
     "3d",
+    "responsive",
+    "responsive-web-design",
     "conversion",
     "cro",
     "onboarding",

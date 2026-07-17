@@ -4,14 +4,14 @@
     "name": "Guilherme Comartins"
   },
   "metadata": {
-    "description": "Guilherme's frontend craft skills for Claude Code — design direction (a style-agnostic method plus editorial, Swiss, brutalist, luxury, and portfolio lenses), smooth 60fps React animation, and interactive WebGL/3D (react-three-fiber).",
+    "description": "Guilherme's frontend craft skills for Claude Code — design direction (a style-agnostic method plus editorial, Swiss, brutalist, luxury, and portfolio lenses), smooth 60fps React animation, interactive WebGL/3D (react-three-fiber), responsive/fluid layout across every screen, and a revenue-centric design playbook for conversion, onboarding, and pricing.",
     "version": "1.0.0"
   },
   "plugins": [
     {
       "name": "awesome-frontend",
       "source": "./plugins/awesome-frontend",
-      "description": "Design distinctive, high-craft frontends and animate them smoothly. Bundles a style-agnostic design method, five reference-backed style lenses (editorial, Swiss/minimal, brutalist, luxury, portfolio), 60fps React animation best practices, interactive WebGL/3D (react-three-fiber), and a revenue-centric design playbook for conversion, onboarding, pricing, and retention.",
+      "description": "Design distinctive, high-craft frontends and animate them smoothly. Bundles a style-agnostic design method, five reference-backed style lenses (editorial, Swiss/minimal, brutalist, luxury, portfolio), 60fps React animation best practices, interactive WebGL/3D (react-three-fiber), responsive/fluid layout that never breaks on mobile, and a revenue-centric design playbook for conversion, onboarding, pricing, and retention.",
       "author": {
         "name": "Guilherme Comartins"
       },
